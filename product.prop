@@ -14,6 +14,9 @@ ro.fingerprint.inscreen_disabled=true
 
 # Graphics
 vendor.display.disable_rotator_downscale=1
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
 
 # IORap
 iorapd.perfetto.enable=true
@@ -25,3 +28,4 @@ persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
+
