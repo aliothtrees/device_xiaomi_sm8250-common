@@ -127,23 +127,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Phonesky \
     GoogleServicesFramework
 
-# Dex pre-opt
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
-WITH_DEXPREOPT_DEBUG_INFO := false
-
-# Recommend using the non debug dexpreopter
-USE_DEX2OAT_DEBUG := false
-
 # SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
-
-# Dex
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7 \
-    dalvik.vm.boot-dex2oat-threads=7 \
-    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-    dalvik.vm.image-dex2oat-threads=8
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -274,12 +259,6 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Dex
-ART_BUILD_TARGET_NDEBUG := true
-ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := true
-ART_BUILD_HOST_DEBUG := false
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -461,10 +440,6 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
-
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
 
 # Power
 PRODUCT_PACKAGES += \
